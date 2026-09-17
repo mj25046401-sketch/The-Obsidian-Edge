@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Obsidian Edge | Alex Coutinho | NJ Barber & Texture Specialist</title>
+  <meta name="description" content="Premier luxury barber studio and texture specialist in Union, NJ led by Master Barber Alex Coutinho. Precision cuts, custom texture styling, razor fades, and beard sculpting.">
+  
+  <!-- Google Fonts: Montserrat (Headings) & Inter (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#0A0A0A',
+            darkslate: '#1F2937',
+            metallic: '#9CA3AF',
+            platinum: '#E5E7EB'
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Montserrat', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #0A0A0A;
+      color: #FFFFFF;
+      font-family: 'Inter', sans-serif;
+    }
+    h1, h2, h3, .font-heading {
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: -0.02em;
+    }
+    .glass-card {
+      background: rgba(31, 41, 55, 0.45);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-card:hover {
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0A0A0A;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #262626;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #404040;
+    }
+  </style>
+</head>
+<body class="bg-obsidian text-white antialiased selection:bg-neutral-300 selection:text-black min-h-screen">
+
+  <!-- ==================== HEADER / NAVIGATION BAR ==================== -->
+  <header id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-obsidian/95 backdrop-blur-md border-b border-neutral-800/80 py-3 sm:py-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 select-none group">
+        <div class="p-1 rounded transition-transform group-hover:scale-105">
+          <!-- Razor Blade SVG Icon -->
+          <svg class="w-12 h-6 sm:w-14 sm:h-7" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="razorChrome" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFFFFF" />
+                <stop offset="35%" stop-color="#D1D5DB" />
+                <stop offset="65%" stop-color="#9CA3AF" />
+                <stop offset="100%" stop-color="#4B5563" />
+              </linearGradient>
+            </defs>
+            <rect x="6" y="8" width="108" height="44" rx="4" fill="url(#razorChrome)" stroke="#E5E7EB" stroke-width="1.5"/>
+            <line x1="8" y1="11" x2="112" y2="11" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.8"/>
+            <line x1="8" y1="49" x2="112" y2="49" stroke="#111827" stroke-width="1" stroke-opacity="0.9"/>
+            <path d="M 6 18 L 12 18 L 12 42 L 6 42" fill="#0A0A0A"/>
+            <path d="M 114 18 L 108 18 L 108 42 L 114 42" fill="#0A0A0A"/>
+            <rect x="24" y="27" width="72" height="6" rx="3" fill="#0A0A0A"/>
+            <circle cx="34" cy="30" r="4" fill="#0A0A0A"/>
+            <path d="M 60 36 C 58 36 54 32 54 28 C 54 25 56.5 23 59 25 C 60 26 60 26 60 26 C 60 26 60 26 61 25 C 63.5 23 66 25 66 28 C 66 32 62 36 60 36 Z" fill="#0A0A0A"/>
+            <circle cx="86" cy="30" r="4" fill="#0A0A0A"/>
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-heading font-black tracking-wider text-base sm:text-lg text-white">THE OBSIDIAN EDGE</span>
+          <span class="text-[10px] sm:text-[11px] font-medium tracking-widest text-neutral-400 uppercase -mt-0.5">Alex Coutinho • Barber & Texture</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center space-x-7">
+        <a href="#about" class="text-xs tracking-widest font-semibold text-neutral-300 hover:text-white transition-colors uppercase">About Alex</a>
+        <a href="#services" class="text-xs tracking-widest font-semibold text-neutral-300 hover:text-white transition-colors uppercase">Services</a>
+        <a href="#transformations" class="text-xs tracking-widest font-semibold text-neutral-300 hover:text-white transition-colors uppercase">Transformations</a>
+        <a href="#location" class="text-xs tracking-widest font-semibold text-neutral-300 hover:text-white transition-colors uppercase">Studio Location</a>
+        <a href="#contact" class="text-xs tracking-widest font-semibold text-neutral-300 hover:text-white transition-colors uppercase">Contact</a>
+      </nav>
+
+      <!-- CTA Button -->
+      <div class="flex items-center gap-3">
+        <button onclick="openBookingModal()" class="px-5 py-2.5 rounded-md font-heading font-bold text-xs uppercase tracking-widest text-neutral-950 bg-gradient-to-r from-neutral-100 via-neutral-200 to-neutral-300 hover:from-white hover:to-neutral-100 shadow-[0_0_20px_rgba(255,255,255,0.25)] transition-all transform hover:-translate-y-0.5">
+          Book Appointment
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="lg:hidden p-2 text-neutral-300 hover:text-white" aria-label="Toggle menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer" class="hidden lg:hidden bg-obsidian border-b border-neutral-800 px-6 py-6 space-y-4">
+      <a href="#about" onclick="toggleMobileMenu()" class="block text-sm font-semibold tracking-wider text-neutral-200 hover:text-white py-1 uppercase">About Alex</a>
+      <a href="#services" onclick="toggleMobileMenu()" class="block text-sm font-semibold tracking-wider text-neutral-200 hover:text-white py-1 uppercase">Services</a>
+      <a href="#transformations" onclick="toggleMobileMenu()" class="block text-sm font-semibold tracking-wider text-neutral-200 hover:text-white py-1 uppercase">Transformations</a>
+      <a href="#location" onclick="toggleMobileMenu()" class="block text-sm font-semibold tracking-wider text-neutral-200 hover:text-white py-1 uppercase">Studio Location</a>
+      <a href="#contact" onclick="toggleMobileMenu()" class="block text-sm font-semibold tracking-wider text-neutral-200 hover:text-white py-1 uppercase">Contact</a>
+      <div class="pt-2">
+        <button onclick="toggleMobileMenu(); openBookingModal()" class="w-full py-3 rounded text-xs uppercase font-bold tracking-widest text-black bg-white">
+          Book Appointment Now
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden bg-gradient-to-b from-obsidian via-[#0D1117] to-obsidian">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Left Hero Content -->
+        <div class="lg:col-span-7 flex flex-col items-start space-y-6">
+          
+          <!-- Badges -->
+          <div class="flex flex-wrap items-center gap-2.5">
+            <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-neutral-900/90 text-neutral-200 border border-neutral-700/70">
+              ✂️ Texture Specialist
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-neutral-900/90 text-neutral-200 border border-neutral-700/70">
+              📍 Union, NJ
+            </span>
+          </div>
+
+          <!-- Headline -->
+          <h1 class="font-heading font-black text-4xl sm:text-5xl md:text-6xl xl:text-7xl tracking-tight leading-[1.05] text-white uppercase">
+            TRANSFORM YOUR LOOK.<br>
+            <span class="text-neutral-300">MASTER PRECISION.</span>
+          </h1>
+
+          <!-- Subheadline -->
+          <p class="text-base sm:text-lg md:text-xl text-neutral-300 max-w-2xl font-normal leading-relaxed">
+            Union, NJ's premier texture specialist and barber <strong class="text-white">Alex Coutinho</strong>. Crafting sharp fades, custom texture, and precision beard sculpts.
+          </p>
+
+          <!-- Primary Action Buttons -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto pt-2">
+            <button onclick="openBookingModal()" class="px-8 py-4 rounded-md font-heading font-bold text-sm uppercase tracking-widest text-black bg-gradient-to-r from-neutral-100 via-neutral-200 to-neutral-300 hover:from-white shadow-[0_0_25px_rgba(255,255,255,0.2)] transition-all transform hover:-translate-y-0.5 text-center">
+              Book Your Slot
+            </button>
+            <a href="#services" class="px-7 py-4 rounded-md font-heading font-semibold text-sm uppercase tracking-widest text-neutral-200 hover:text-white bg-darkslate/80 hover:bg-darkslate border border-neutral-700 transition-all text-center">
+              Explore Services
+            </a>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="pt-2 flex items-center gap-6 text-xs text-neutral-400">
+            <div class="flex items-center gap-1.5">
+              <span class="text-white font-bold text-sm">4.9★</span>
+              <span>(380+ Reviews)</span>
+            </div>
+            <div class="w-1 h-1 rounded-full bg-neutral-700"></div>
+            <div>
+              <span>100% Guaranteed Services</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Hero Visual -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative rounded-2xl overflow-hidden border border-neutral-700/60 shadow-[0_20px_50px_rgba(0,0,0,0.9)] bg-neutral-900">
+            <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1000&q=85" alt="Master Barber Alex Coutinho" class="w-full h-[380px] sm:h-[460px] object-cover object-center filter contrast-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent opacity-80"></div>
+            
+            <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-neutral-950/85 backdrop-blur-md border border-neutral-700/70 flex items-center justify-between">
+              <div>
+                <p class="text-xs text-neutral-400 uppercase tracking-widest font-medium">Master Barber</p>
+                <p class="text-base font-bold text-white tracking-wide">Alex Coutinho</p>
+                <p class="text-[11px] text-neutral-300">Texture Specialist • Union, NJ</p>
+              </div>
+              <span class="px-2.5 py-1 rounded bg-neutral-800 border border-neutral-700 text-[11px] font-semibold text-neutral-200">Private Studio</span>
+            </div>
+          </div>
+
+          <!-- Floating 100% Guaranteed Badge -->
+          <div class="absolute -top-4 -left-4 p-3 rounded-full bg-gradient-to-br from-neutral-200 to-neutral-500 text-black shadow-2xl border-2 border-white/40 transform -rotate-6">
+            <div class="text-[10px] leading-tight font-black uppercase tracking-wider text-black text-center">
+              100%<br>Guaranteed
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Featured Services Quick Strip -->
+      <div class="mt-14 pt-8 border-t border-neutral-800/80">
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="text-xs sm:text-sm font-bold uppercase tracking-widest text-neutral-400 flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+            Featured Services
+          </h2>
+          <span class="text-xs font-mono text-neutral-500">@theobsidianedge</span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
+          <div onclick="openBookingModal('precision-fade')" class="cursor-pointer p-4 rounded-xl bg-darkslate/50 hover:bg-darkslate border border-neutral-800 hover:border-neutral-600 transition-all">
+            <div class="flex justify-between items-start mb-1">
+              <span class="text-xs font-extrabold uppercase text-white">THE PRECISION FADE</span>
+              <span class="text-xs font-mono font-bold text-white bg-neutral-900 px-2 py-0.5 rounded">$35.00</span>
+            </div>
+            <p class="text-xs text-neutral-400">Crafting precision fade for the sharpest lines and seamless skin blend.</p>
+          </div>
+
+          <div onclick="openBookingModal('texture-styling')" class="cursor-pointer p-4 rounded-xl bg-darkslate/50 hover:bg-darkslate border border-neutral-800 hover:border-neutral-600 transition-all">
+            <div class="flex justify-between items-start mb-1">
+              <span class="text-xs font-extrabold uppercase text-white">TEXTURE STYLING</span>
+              <span class="text-xs font-mono font-bold text-white bg-neutral-900 px-2 py-0.5 rounded">$45.00</span>
+            </div>
+            <p class="text-xs text-neutral-400">Crafting sharp fades, custom texture, and precision grooming.</p>
+          </div>
+
+          <div onclick="openBookingModal('beard-sculpt')" class="cursor-pointer p-4 rounded-xl bg-darkslate/50 hover:bg-darkslate border border-neutral-800 hover:border-neutral-600 transition-all">
+            <div class="flex justify-between items-start mb-1">
+              <span class="text-xs font-extrabold uppercase text-white">BEARD SCULPT</span>
+              <span class="text-xs font-mono font-bold text-white bg-neutral-900 px-2 py-0.5 rounded">$25.00</span>
+            </div>
+            <p class="text-xs text-neutral-400">Beard sculpt with strength, precision lines, and hot steam towel prep.</p>
+          </div>
+
+          <div onclick="openBookingModal('vip-grooming')" class="cursor-pointer p-4 rounded-xl bg-darkslate/50 hover:bg-darkslate border border-neutral-800 hover:border-neutral-600 transition-all">
+            <div class="flex justify-between items-start mb-1">
+              <span class="text-xs font-extrabold uppercase text-white">VIP GROOMING PACKAGE</span>
+              <span class="text-xs font-mono font-bold text-white bg-neutral-900 px-2 py-0.5 rounded">$80.00</span>
+            </div>
+            <p class="text-xs text-neutral-400">Precision cut, texture work, beard sculpt, hot towel shave & facial mask.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== SPECIALIZED SERVICES SECTION ==================== -->
+  <section id="services" class="py-20 md:py-28 bg-obsidian border-t border-neutral-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="px-3 py-1 rounded-full bg-neutral-900 border border-neutral-800 text-xs font-semibold uppercase tracking-widest text-neutral-400">
+          Barber Menu & Craftsmanship
+        </span>
+        <h2 class="font-heading font-black text-3xl sm:text-4xl md:text-5xl text-white uppercase tracking-tight mt-3">
+          Specialized Barbering Services
+        </h2>
+        <p class="mt-3 text-neutral-400 text-sm sm:text-base leading-relaxed">
+          Every appointment begins with cranial mapping and personal texture diagnostics to ensure seamless flow and sharpness.
+        </p>
+      </div>
+
+      <!-- Tabbed Categories -->
+      <div class="flex items-center justify-start sm:justify-center overflow-x-auto pb-4 mb-10 gap-2">
+        <button onclick="filterServices('all')" id="tab-all" class="service-tab-btn whitespace-nowrap px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-white text-black">All Services</button>
+        <button onclick="filterServices('cuts-fades')" id="tab-cuts-fades" class="service-tab-btn whitespace-nowrap px-4 py-2 rounded-full text-xs font-semibold tracking-wider bg-darkslate text-neutral-300 hover:text-white">Precision Cut & Fade</button>
+        <button onclick="filterServices('texture-perms')" id="tab-texture-perms" class="service-tab-btn whitespace-nowrap px-4 py-2 rounded-full text-xs font-semibold tracking-wider bg-darkslate text-neutral-300 hover:text-white">Texture Styling & Perms</button>
+        <button onclick="filterServices('beard-lineup')" id="tab-beard-lineup" class="service-tab-btn whitespace-nowrap px-4 py-2 rounded-full text-xs font-semibold tracking-wider bg-darkslate text-neutral-300 hover:text-white">Beard Sculpt & Razor Line</button>
+        <button onclick="filterServices('vip-grooming')" id="tab-vip-grooming" class="service-tab-btn whitespace-nowrap px-4 py-2 rounded-full text-xs font-semibold tracking-wider bg-darkslate text-neutral-300 hover:text-white">Complete VIP Grooming</button>
+      </div>
+
+      <!-- Services Grid -->
+      <div id="services-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Card 1 -->
+        <div class="service-card flex flex-col justify-between p-6 rounded-2xl bg-darkslate/40 border border-neutral-800 hover:border-neutral-600 transition-all" data-category="cuts-fades">
+          <div>
+            <div class="flex justify-between items-start mb-3">
+              <h3 class="font-heading font-bold text-lg text-white">The Precision Fade</h3>
+              <span class="font-heading font-black text-2xl text-white">$35.00</span>
+            </div>
+            <p class="text-xs text-neutral-400 mb-2">⏱ 40 Minutes</p>
+            <p class="text-neutral-300 text-xs sm:text-sm leading-relaxed mb-4">Signature skin fade or taper tailored to your head shape. Seamless blend from skin to desired length with straight razor finish.</p>
+            <div class="space-y-1 text-xs text-neutral-400 mb-6">
+              <p>• Zero-gap foil shaver</p>
+              <p>• Custom taper/skin blend</p>
+              <p>• Hot lather razor neck clean</p>
+            </div>
+          </div>
+          <button onclick="openBookingModal('precision-fade')" class="w-full py-3 rounded-xl font-heading font-bold text-xs uppercase tracking-widest text-white bg-neutral-900 hover:bg-white hover:text-black border border-neutral-700 transition-all">
+            Book This Service &rarr;
+          </button>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="service-card flex flex-col justify-between p-6 rounded-2xl bg-darkslate/40 border border-neutral-800 hover:border-neutral-600 transition-all" data-category="texture-perms">
+          <div>
+            <div class="flex justify-between items-start mb-3">
+              <h3 class="font-heading font-bold text-lg text-white">Texture Styling & Flow Cut</h3>
+              <span class="font-heading font-black text-2xl text-white">$45.00</span>
+            </div>
+            <p class="text-xs text-neutral-400 mb-2">⏱ 45 Minutes</p>
+            <p class="text-neutral-300 text-xs sm:text-sm leading-relaxed mb-4">Point-cutting, shear channeling, and texturizing styling to create weightless volume, messy crops, or modern curtain flows.</p>
+            <div class="space-y-1 text-xs text-neutral-400 mb-6">
+              <p>• Japanese dry-cutting shears</p>
+              <p>• Volume debulking without frizz</p>
+              <p>• Natural movement sculpting</p>
+            </div>
+          </div>
+          <button onclick="openBookingModal('texture-styling')" class="w-full py-3 rounded-xl font-heading font-bold text-xs uppercase tracking-widest text-white bg-neutral-900 hover:bg-white hover:text-black border border-neutral-700 transition-all">
+            Book This Service &rarr;
+          </button>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="service-card flex flex-col justify-between p-6 rounded-2xl bg-darkslate/40 border border-neutral-800 hover:border-neutral-600 transition-all" data-category="beard-lineup">
+          <div>
+            <div class="flex justify-between items-start mb-3">
+              <h3 class="font-heading font-bold text-lg text-white">Beard Sculpt & Razor Edge</h3>
+              <span class="font-heading font-black text-2xl text-white">$25.00</span>
+            </div>
+            <p class="text-xs text-neutral-400 mb-2">⏱ 30 Minutes</p>
+            <p class="text-neutral-300 text-xs sm:text-sm leading-relaxed mb-4">Crisp cheek and jawline razor definition, symmetry alignment, length graduation, and organic conditioning oil infusion.</p>
+            <div class="space-y-1 text-xs text-neutral-400 mb-6">
+              <p>• Pre-shave eucalyptus oil</p>
+              <p>• Hot steam towel prep</p>
+              <p>• Straight razor edge-up</p>
+            </div>
+          </div>
+          <button onclick="openBookingModal('beard-sculpt')" class="w-full py-3 rounded-xl font-heading font-bold text-xs uppercase tracking-widest text-white bg-neutral-900 hover:bg-white hover:text-black border border-neutral-700 transition-all">
+            Book This Service &rarr;
+          </button>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="service-card flex flex-col justify-between p-6 rounded-2xl bg-darkslate/40 border border-neutral-800 hover:border-neutral-600 transition-all" data-category="texture-perms">
+          <div>
+            <div class="flex justify-between items-start mb-3">
+              <h3 class="font-heading font-bold text-lg text-white">Modern Texture Perm</h3>
+              <span class="font-heading font-black text-2xl text-white">$110.00</span>
+            </div>
+            <p class="text-xs text-neutral-400 mb-2">⏱ 90 Minutes</p>
+            <p class="text-neutral-300 text-xs sm:text-sm leading-relaxed mb-4">Transform limp or straight hair into effortless wavy texture, relaxed curls, or root-lifted Korean drop perms.</p>
+            <div class="space-y-1 text-xs text-neutral-400 mb-6">
+              <p>• Custom rod diameter mapping</p>
+              <p>• Gentle low-ammonia formula</p>
+              <p>• Low-maintenance air dry</p>
+            </div>
+          </div>
+          <button onclick="openBookingModal('modern-texture-perm')" class="w-full py-3 rounded-xl font-heading font-bold text-xs uppercase tracking-widest text-white bg-neutral-900 hover:bg-white hover:text-black border border-neutral-700 transition-all">
+            Book This Service &rarr;
+          </button>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="service-card flex flex-col justify-between p-6 rounded-2xl bg-darkslate/40 border border-neutral-800 hover:border-neutral-600 transition-all" data-category="vip-grooming">
+          <div>
+            <div class="flex justify-between items-start mb-3">
+              <h3 class="font-heading font-bold text-lg text-white">The Obsidian VIP Package</h3>
+              <span class="font-heading font-black text-2xl text-white">$80.00</span>
+            </div>
+            <p class="text-xs text-neutral-400 mb-2">⏱ 75 Minutes</p>
+            <p class="text-neutral-300 text-xs sm:text-sm leading-relaxed mb-4">The complete luxury experience: Precision fade, shear texturizing, full beard sculpting, double hot lather steam shave, and charcoal mask.</p>
+            <div class="space-y-1 text-xs text-neutral-400 mb-6">
+              <p>• Full precision cut & texture</p>
+              <p>• Double hot steam towels</p>
+              <p>• Complete beard architecture</p>
+            </div>
+          </div>
+          <button onclick="openBookingModal('vip-grooming-package')" class="w-full py-3 rounded-xl font-heading font-bold text-xs uppercase tracking-widest text-white bg-neutral-900 hover:bg-white hover:text-black border border-neutral-700 transition-all">
+            Book This Service &rarr;
+          </button>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="service-card flex flex-col justify-between p-6 rounded-2xl bg-darkslate/40 border border-neutral-800 hover:border-neutral-600 transition-all" data-category="cuts-fades">
+          <div>
+            <div class="flex justify-between items-start mb-3">
+              <h3 class="font-heading font-bold text-lg text-white">Cut + Beard Sculpt Combo</h3>
+              <span class="font-heading font-black text-2xl text-white">$55.00</span>
+            </div>
+            <p class="text-xs text-neutral-400 mb-2">⏱ 60 Minutes</p>
+            <p class="text-neutral-300 text-xs sm:text-sm leading-relaxed mb-4">Our most popular appointment: comprehensive precision fade or scissor cut combined with a tailored beard sculpt and razor lineup.</p>
+            <div class="space-y-1 text-xs text-neutral-400 mb-6">
+              <p>• Seamless temple-to-beard blend</p>
+              <p>• Straight razor perimeter</p>
+              <p>• Styling product application</p>
+            </div>
+          </div>
+          <button onclick="openBookingModal('haircut-beard-combo')" class="w-full py-3 rounded-xl font-heading font-bold text-xs uppercase tracking-widest text-white bg-neutral-900 hover:bg-white hover:text-black border border-neutral-700 transition-all">
+            Book This Service &rarr;
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT ALEX COUTINHO ==================== -->
+  <section id="about" class="py-20 md:py-28 bg-gradient-to-b from-obsidian via-[#0E131F] to-obsidian border-t border-neutral-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Portrait -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative rounded-2xl overflow-hidden border border-neutral-700/80 shadow-2xl bg-neutral-900">
+            <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=900&q=80" alt="Alex Coutinho Master Barber" class="w-full h-[460px] object-cover object-top filter contrast-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent opacity-85"></div>
+            
+            <div class="absolute bottom-6 left-6 right-6 p-5 rounded-xl bg-neutral-950/90 border border-neutral-800">
+              <h3 class="font-heading font-black text-xl text-white">ALEX COUTINHO</h3>
+              <p class="text-xs text-neutral-400 mt-0.5">Founder & Master Barber • Union, NJ</p>
+              <div class="mt-3 pt-3 border-t border-neutral-800 flex justify-between text-xs text-neutral-300">
+                <span>The Obsidian Edge Studio</span>
+                <span class="text-emerald-400 font-semibold">● Accepting Clients</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Story & Philosophy -->
+        <div class="lg:col-span-7 flex flex-col space-y-6">
+          <span class="px-3.5 py-1 rounded-full bg-neutral-900 border border-neutral-800 text-xs font-semibold uppercase tracking-widest text-neutral-300 w-fit">
+            The Artisan Behind The Blade
+          </span>
+
+          <h2 class="font-heading font-black text-3xl sm:text-4xl md:text-5xl text-white uppercase tracking-tight leading-tight">
+            Elevating Personal Style Through Precision Texture & Form
+          </h2>
+
+          <p class="text-neutral-300 text-sm sm:text-base leading-relaxed">
+            Founded by Master Barber <strong>Alex Coutinho</strong>, <em>The Obsidian Edge</em> was established on a simple philosophy: cutting hair is an architectural discipline tailored specifically to your head shape, hair density, and daily lifestyle.
+          </p>
+
+          <p class="text-neutral-300 text-sm sm:text-base leading-relaxed">
+            Alex has established a sterling reputation across Union County and Northern New Jersey for diagnosing unruly hair types—from pin-straight Asian hair needing texture separation, to curly perms and surgical low taper fades.
+          </p>
+
+          <!-- Core Pillars -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            <div class="p-4 rounded-xl bg-darkslate/35 border border-neutral-800">
+              <p class="font-heading font-bold text-sm text-white">✓ Texture Diagnostics</p>
+              <p class="text-xs text-neutral-400 mt-1">Cranial mapping and density assessment prior to cutting.</p>
+            </div>
+            <div class="p-4 rounded-xl bg-darkslate/35 border border-neutral-800">
+              <p class="font-heading font-bold text-sm text-white">✓ Japanese Shear Artistry</p>
+              <p class="text-xs text-neutral-400 mt-1">Point-cutting and debulking without causing surface frizz.</p>
+            </div>
+            <div class="p-4 rounded-xl bg-darkslate/35 border border-neutral-800">
+              <p class="font-heading font-bold text-sm text-white">✓ Modern Texture Perms</p>
+              <p class="text-xs text-neutral-400 mt-1">Effortless wave structure formulated for low-maintenance styling.</p>
+            </div>
+            <div class="p-4 rounded-xl bg-darkslate/35 border border-neutral-800">
+              <p class="font-heading font-bold text-sm text-white">✓ Razor Sharp Detailing</p>
+              <p class="text-xs text-neutral-400 mt-1">Hot botanical steam towels and surgical straight-razor lines.</p>
+            </div>
+          </div>
+
+          <!-- Stats -->
+          <div class="grid grid-cols-3 gap-4 pt-4 border-t border-neutral-800">
+            <div>
+              <span class="font-heading font-black text-2xl sm:text-3xl text-white">12+</span>
+              <p class="text-[11px] text-neutral-400 uppercase tracking-wider">Years Crafting</p>
+            </div>
+            <div>
+              <span class="font-heading font-black text-2xl sm:text-3xl text-white">4,800+</span>
+              <p class="text-[11px] text-neutral-400 uppercase tracking-wider">Transformations</p>
+            </div>
+            <div>
+              <span class="font-heading font-black text-2xl sm:text-3xl text-white">5.0 ★</span>
+              <p class="text-[11px] text-neutral-400 uppercase tracking-wider">Client Rating</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== HAIR TRANSFORMATION GALLERY ==================== -->
+  <section id="transformations" class="py-20 md:py-28 bg-obsidian border-t border-neutral-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div>
+          <span class="px-3 py-1 rounded-full bg-neutral-900 border border-neutral-800 text-xs font-semibold uppercase tracking-widest text-neutral-400">
+            Real Client Results
+          </span>
+          <h2 class="font-heading font-black text-3xl sm:text-4xl md:text-5xl text-white uppercase tracking-tight mt-3">
+            Hair Transformation Gallery
+          </h2>
+          <p class="mt-2 text-neutral-400 text-sm sm:text-base max-w-xl">
+            Click the "Flip View" button on any transformation to switch between the consultation before and final styled finish.
+          </p>
+        </div>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Transformation Card 1 -->
+        <div class="trans-card rounded-2xl bg-darkslate/35 border border-neutral-800 overflow-hidden flex flex-col">
+          <div class="relative h-72 sm:h-80 w-full overflow-hidden bg-neutral-950">
+            <img id="trans-img-1" src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=600&q=80" alt="Texture Crop After" class="w-full h-full object-cover">
+            <span id="trans-badge-1" class="absolute top-4 left-4 px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-widest bg-white text-black">
+              ✨ After • Cut & Styled
+            </span>
+            <button onclick="toggleTransImage('1', 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=600&q=80', 'https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=600&q=80')" class="absolute top-4 right-4 px-3 py-1.5 rounded-lg bg-black/80 hover:bg-black text-white text-xs font-semibold border border-neutral-700">
+              Flip View ⟳
+            </button>
+            <div class="absolute bottom-3 left-4 right-4 flex justify-between text-xs text-neutral-300">
+              <span class="bg-black/75 px-2 py-0.5 rounded">Point-Cut Shears + Matte Clay</span>
+              <span class="bg-black/75 px-2 py-0.5 rounded">@theobsidianedge</span>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <p class="text-[11px] font-bold uppercase tracking-wider text-neutral-400">Texture Styling</p>
+              <h3 class="font-heading font-bold text-lg text-white mb-2">Heavy Bulky Straight to Textured Crop</h3>
+              <p class="text-xs sm:text-sm text-neutral-300 leading-relaxed">Deconstructed bulky crown weight using Japanese point-cutting techniques. Created root lift and defined separation.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-neutral-800 flex justify-between items-center">
+              <span class="text-xs text-neutral-400">Alex Coutinho</span>
+              <button onclick="openBookingModal('texture-styling')" class="text-xs font-bold uppercase text-white hover:underline">Get This Cut &rarr;</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Transformation Card 2 -->
+        <div class="trans-card rounded-2xl bg-darkslate/35 border border-neutral-800 overflow-hidden flex flex-col">
+          <div class="relative h-72 sm:h-80 w-full overflow-hidden bg-neutral-950">
+            <img id="trans-img-2" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Low Taper Fade After" class="w-full h-full object-cover">
+            <span id="trans-badge-2" class="absolute top-4 left-4 px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-widest bg-white text-black">
+              ✨ After • Cut & Styled
+            </span>
+            <button onclick="toggleTransImage('2', 'https://images.unsplash.com/photo-1517832606589-7629c3ab844c?auto=format&fit=crop&w=600&q=80', 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80')" class="absolute top-4 right-4 px-3 py-1.5 rounded-lg bg-black/80 hover:bg-black text-white text-xs font-semibold border border-neutral-700">
+              Flip View ⟳
+            </button>
+            <div class="absolute bottom-3 left-4 right-4 flex justify-between text-xs text-neutral-300">
+              <span class="bg-black/75 px-2 py-0.5 rounded">Zero-Gap Foil + Razor Line</span>
+              <span class="bg-black/75 px-2 py-0.5 rounded">@theobsidianedge</span>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <p class="text-[11px] font-bold uppercase tracking-wider text-neutral-400">Precision Fade</p>
+              <h3 class="font-heading font-bold text-lg text-white mb-2">Low Skin Taper with Natural Curls</h3>
+              <p class="text-xs sm:text-sm text-neutral-300 leading-relaxed">Sculpted temple and nape taper keeping natural curly bulk on top. Surgical razor lineup across hairline for immaculate contrast.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-neutral-800 flex justify-between items-center">
+              <span class="text-xs text-neutral-400">Alex Coutinho</span>
+              <button onclick="openBookingModal('precision-fade')" class="text-xs font-bold uppercase text-white hover:underline">Get This Cut &rarr;</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== STUDIO LOCATION & HOURS ==================== -->
+  <section id="location" class="py-20 md:py-28 bg-gradient-to-b from-obsidian via-[#0D121B] to-obsidian border-t border-neutral-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="px-3 py-1 rounded-full bg-neutral-900 border border-neutral-800 text-xs font-semibold uppercase tracking-widest text-neutral-400">
+          Flagship Location
+        </span>
+        <h2 class="font-heading font-black text-3xl sm:text-4xl md:text-5xl text-white uppercase tracking-tight mt-3">
+          Studio Location & Hours
+        </h2>
+        <p class="mt-3 text-neutral-400 text-sm sm:text-base leading-relaxed">
+          Conveniently positioned off Route 22 in Union, NJ with complimentary dedicated parking for our clients.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: Address & Hours -->
+        <div class="lg:col-span-6 space-y-6">
+          
+          <!-- Address Card -->
+          <div class="p-6 rounded-2xl bg-darkslate/45 border border-neutral-800">
+            <span class="text-[11px] font-bold uppercase tracking-widest text-neutral-400">Studio Address</span>
+            <h3 class="font-heading font-bold text-xl text-white mt-1">1235 W. Chestnut St</h3>
+            <p class="text-sm text-neutral-300">Union, NJ 07083</p>
+
+            <div class="grid grid-cols-2 gap-3 mt-6 pt-4 border-t border-neutral-800">
+              <a href="https://maps.google.com/?q=1235+W+Chestnut+St,+Union,+NJ+07083" target="_blank" class="py-2.5 px-3 rounded-xl bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-semibold text-center border border-neutral-700">
+                Get Directions ↗
+              </a>
+              <a href="tel:9085839244" class="py-2.5 px-3 rounded-xl bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-semibold text-center border border-neutral-700">
+                Call (908) 583-9244
+              </a>
+            </div>
+          </div>
+
+          <!-- Hours Card -->
+          <div class="p-6 rounded-2xl bg-darkslate/45 border border-neutral-800">
+            <div class="flex justify-between items-center mb-4 pb-2 border-b border-neutral-800">
+              <h4 class="font-heading font-bold text-base uppercase text-white">Hours of Operation</h4>
+              <span class="text-xs font-bold text-emerald-400 bg-emerald-950/60 px-2.5 py-0.5 rounded-full border border-emerald-800">Open Today</span>
+            </div>
+            <div class="space-y-2.5 text-xs sm:text-sm">
+              <div class="flex justify-between py-1 border-b border-neutral-800/50">
+                <span class="text-neutral-300">Monday – Thursday</span>
+                <span class="text-white font-mono">9:00 AM – 7:30 PM</span>
+              </div>
+              <div class="flex justify-between py-1 border-b border-neutral-800/50">
+                <span class="text-neutral-300">Friday</span>
+                <span class="text-white font-mono">8:30 AM – 8:00 PM</span>
+              </div>
+              <div class="flex justify-between py-1 border-b border-neutral-800/50">
+                <span class="text-neutral-300">Saturday</span>
+                <span class="text-white font-mono">8:00 AM – 6:00 PM</span>
+              </div>
+              <div class="flex justify-between py-1">
+                <span class="text-neutral-300">Sunday</span>
+                <span class="text-white font-mono">10:00 AM – 4:00 PM (Appt Only)</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Interactive Google Map -->
+        <div class="lg:col-span-6">
+          <div class="relative rounded-2xl overflow-hidden border border-neutral-700/80 shadow-2xl bg-neutral-900 h-[380px] sm:h-[420px] w-full">
+            <iframe
+              title="Studio Map"
+              src="https://maps.google.com/maps?q=1235+W+Chestnut+St,+Union,+NJ+07083&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              class="w-full h-full border-0 filter grayscale invert contrast-125"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+            <div class="absolute top-4 left-4 p-3 rounded-xl bg-neutral-950/90 border border-neutral-700">
+              <p class="font-heading font-bold text-xs uppercase text-white">The Obsidian Edge</p>
+              <p class="text-[11px] text-neutral-400">1235 W. Chestnut St, Union, NJ</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer id="contact" class="bg-black text-white border-t border-neutral-800 pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-12 border-b border-neutral-800">
+        
+        <div>
+          <h3 class="font-heading font-black text-lg text-white">THE OBSIDIAN EDGE</h3>
+          <p class="text-xs text-neutral-400 mt-2 max-w-sm leading-relaxed">
+            Alex Coutinho • Premier NJ Barber & Texture Specialist. Union, NJ 07083.
+          </p>
+          <div class="flex items-center gap-3 mt-4">
+            <a href="https://instagram.com/theobsidianedge" target="_blank" class="text-xs text-neutral-300 hover:text-white bg-neutral-900 px-3 py-1.5 rounded-lg border border-neutral-800">
+              Instagram @theobsidianedge
+            </a>
+            <a href="https://facebook.com/Obsidianedgenj" target="_blank" class="text-xs text-neutral-300 hover:text-white bg-neutral-900 px-3 py-1.5 rounded-lg border border-neutral-800">
+              Facebook Obsidianedgenj
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-widest text-neutral-400 mb-3">Quick Navigation</h4>
+          <ul class="space-y-2 text-xs text-neutral-300">
+            <li><a href="#about" class="hover:text-white">About Alex Coutinho</a></li>
+            <li><a href="#services" class="hover:text-white">Barbering Services & Rates</a></li>
+            <li><a href="#transformations" class="hover:text-white">Before & After Gallery</a></li>
+            <li><a href="#location" class="hover:text-white">Studio Location & Hours</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-widest text-neutral-400 mb-3">Studio Contact</h4>
+          <p class="text-xs text-neutral-300">1235 W. Chestnut St, Union, NJ 07083</p>
+          <p class="text-xs text-neutral-300 mt-1">Direct: (908) 583-9244</p>
+          <button onclick="openBookingModal()" class="mt-4 px-5 py-2 rounded-lg bg-white text-black font-bold text-xs uppercase tracking-wider">
+            Book Appointment
+          </button>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500">
+        <p>© 2026 The Obsidian Edge. All Rights Reserved.</p>
+        <p>Master Barber Alex Coutinho • Union, NJ</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==================== INTERACTIVE BOOKING MODAL POPUP ==================== -->
+  <div id="booking-modal" class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="relative w-full max-w-xl bg-[#0F141F] border border-neutral-700 rounded-2xl shadow-2xl overflow-hidden my-6">
+      
+      <!-- Modal Header -->
+      <div class="px-6 py-4 bg-neutral-950 border-b border-neutral-800 flex justify-between items-center">
+        <div>
+          <h3 id="modal-title" class="font-heading font-black text-lg text-white uppercase">Book Appointment</h3>
+          <p class="text-xs text-neutral-400">Alex Coutinho • 1235 W. Chestnut St, Union, NJ</p>
+        </div>
+        <button onclick="closeBookingModal()" class="p-2 text-neutral-400 hover:text-white text-xl font-bold">&times;</button>
+      </div>
+
+      <!-- Modal Body (Form) -->
+      <div id="modal-form-body" class="p-6 space-y-4 max-h-[75vh] overflow-y-auto">
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-neutral-300 mb-1">1. Choose Service</label>
+          <select id="booking-service-select" class="w-full px-3 py-2.5 rounded-xl bg-neutral-900 border border-neutral-700 text-xs text-white focus:outline-none">
+            <option value="The Precision Fade - $35.00 (40 mins)">The Precision Fade - $35.00 (40 mins)</option>
+            <option value="Texture Styling & Flow Cut - $45.00 (45 mins)">Texture Styling & Flow Cut - $45.00 (45 mins)</option>
+            <option value="Beard Sculpt & Razor Edge - $25.00 (30 mins)">Beard Sculpt & Razor Edge - $25.00 (30 mins)</option>
+            <option value="Modern Texture Perm - $110.00 (90 mins)">Modern Texture Perm - $110.00 (90 mins)</option>
+            <option value="The Obsidian VIP Package - $80.00 (75 mins)">The Obsidian VIP Package - $80.00 (75 mins)</option>
+            <option value="Cut + Beard Sculpt Combo - $55.00 (60 mins)">Cut + Beard Sculpt Combo - $55.00 (60 mins)</option>
+          </select>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-neutral-300 mb-1">2. Date</label>
+            <input type="date" id="booking-date" class="w-full px-3 py-2.5 rounded-xl bg-neutral-900 border border-neutral-700 text-xs text-white">
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-neutral-300 mb-1">Time Slot</label>
+            <select id="booking-time" class="w-full px-3 py-2.5 rounded-xl bg-neutral-900 border border-neutral-700 text-xs text-white">
+              <option>9:30 AM</option>
+              <option>10:15 AM</option>
+              <option>11:00 AM</option>
+              <option>1:00 PM</option>
+              <option>2:00 PM</option>
+              <option>3:30 PM</option>
+              <option>5:15 PM</option>
+              <option>6:00 PM</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-neutral-300 mb-1">3. Your Information</label>
+          <input type="text" id="client-name" placeholder="Full Name *" required class="w-full px-3 py-2.5 rounded-xl bg-neutral-900 border border-neutral-700 text-xs text-white mb-2">
+          <input type="tel" id="client-phone" placeholder="Mobile Phone (for SMS reminder) *" required class="w-full px-3 py-2.5 rounded-xl bg-neutral-900 border border-neutral-700 text-xs text-white mb-2">
+          <input type="email" id="client-email" placeholder="Email Address" class="w-full px-3 py-2.5 rounded-xl bg-neutral-900 border border-neutral-700 text-xs text-white mb-2">
+          <select id="client-hair-type" class="w-full px-3 py-2.5 rounded-xl bg-neutral-900 border border-neutral-700 text-xs text-neutral-300">
+            <option>Hair Texture: Straight / Pin-Straight</option>
+            <option>Hair Texture: Wavy / Medium Density</option>
+            <option>Hair Texture: Curly / Coily / Permed</option>
+            <option>Hair Texture: Thick / Heavy Bulk</option>
+          </select>
+        </div>
+
+        <button type="button" onclick="submitBooking()" class="w-full py-3.5 rounded-xl font-heading font-black text-xs uppercase tracking-widest text-black bg-white hover:bg-neutral-200 transition-all">
+          Confirm Appointment
+        </button>
+      </div>
+
+      <!-- Confirmation Screen (Hidden Initially) -->
+      <div id="modal-confirm-body" class="hidden p-6 text-center space-y-4">
+        <div class="w-14 h-14 mx-auto rounded-full bg-neutral-900 border-2 border-white flex items-center justify-center text-xl">
+          ✓
+        </div>
+        <h4 class="font-heading font-black text-xl text-white">Reservation Confirmed!</h4>
+        <p class="text-xs text-neutral-300">
+          Booking ID: <strong id="confirm-id" class="text-white font-mono">OB-8924</strong>
+        </p>
+        <p id="confirm-summary" class="text-xs text-neutral-400 max-w-sm mx-auto"></p>
+        <p class="text-xs text-neutral-400">Location: 1235 W. Chestnut St, Union, NJ</p>
+        <div class="pt-4">
+          <button onclick="closeBookingModal()" class="px-6 py-2.5 rounded-xl bg-white text-black font-bold text-xs uppercase tracking-wider">
+            Done
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==================== JAVASCRIPT ==================== -->
+  <script>
+    // Set default date in booking input
+    document.addEventListener('DOMContentLoaded', () => {
+      const tomorrow = new Date();
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      const dateInput = document.getElementById('booking-date');
+      if (dateInput) {
+        dateInput.value = tomorrow.toISOString().split('T')[0];
+      }
+    });
+
+    // Mobile Menu Toggle
+    function toggleMobileMenu() {
+      const drawer = document.getElementById('mobile-drawer');
+      drawer.classList.toggle('hidden');
+    }
+
+    // Services Tab Filter
+    function filterServices(category) {
+      const cards = document.querySelectorAll('.service-card');
+      const tabs = document.querySelectorAll('.service-tab-btn');
+
+      tabs.forEach(tab => {
+        tab.classList.remove('bg-white', 'text-black', 'font-bold');
+        tab.classList.add('bg-darkslate', 'text-neutral-300');
+      });
+
+      const activeTab = document.getElementById('tab-' + category);
+      if (activeTab) {
+        activeTab.classList.remove('bg-darkslate', 'text-neutral-300');
+        activeTab.classList.add('bg-white', 'text-black', 'font-bold');
+      }
+
+      cards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Transformations Image Flip
+    function toggleTransImage(id, beforeSrc, afterSrc) {
+      const img = document.getElementById('trans-img-' + id);
+      const badge = document.getElementById('trans-badge-' + id);
+      if (!img) return;
+
+      if (img.src === afterSrc) {
+        img.src = beforeSrc;
+        badge.innerText = '📷 Before • Consultation';
+        badge.className = 'absolute top-4 left-4 px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-widest bg-neutral-900 text-neutral-300 border border-neutral-700';
+      } else {
+        img.src = afterSrc;
+        badge.innerText = '✨ After • Cut & Styled';
+        badge.className = 'absolute top-4 left-4 px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-widest bg-white text-black';
+      }
+    }
+
+    // Booking Modal
+    function openBookingModal(serviceId) {
+      const modal = document.getElementById('booking-modal');
+      const formBody = document.getElementById('modal-form-body');
+      const confirmBody = document.getElementById('modal-confirm-body');
+      const select = document.getElementById('booking-service-select');
+      
+      formBody.classList.remove('hidden');
+      confirmBody.classList.add('hidden');
+      modal.classList.remove('hidden');
+
+      if (serviceId && select) {
+        for (let i = 0; i < select.options.length; i++) {
+          if (select.options[i].value.toLowerCase().includes(serviceId.replace('-', ' '))) {
+            select.selectedIndex = i;
+            break;
+          }
+        }
+      }
+    }
+
+    function closeBookingModal() {
+      document.getElementById('booking-modal').classList.add('hidden');
+    }
+
+    function submitBooking() {
+      const name = document.getElementById('client-name').value.trim();
+      const phone = document.getElementById('client-phone').value.trim();
+      const service = document.getElementById('booking-service-select').value;
+      const date = document.getElementById('booking-date').value;
+      const time = document.getElementById('booking-time').value;
+
+      if (!name || !phone) {
+        alert('Please provide your name and phone number for booking confirmation.');
+        return;
+      }
+
+      const refId = 'OB-' + Math.floor(1000 + Math.random() * 9000);
+      document.getElementById('confirm-id').innerText = refId;
+      document.getElementById('confirm-summary').innerText = `Appointment for ${name} (${service}) on ${date} at ${time}.`;
+
+      document.getElementById('modal-form-body').classList.add('hidden');
+      document.getElementById('modal-confirm-body').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "name": "The Obsidian Edge",
+  "description": "Premier luxury barber studio and texture specialist in Union, NJ led by Master Barber Alex Coutinho. Precision cuts, custom texture styling, razor fades, and beard sculpting.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
